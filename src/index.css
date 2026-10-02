@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#0A0F1C] text-white font-sans;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 28, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 230, 118, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 230, 118, 0.5);
+}
+
+/* Glassmorphism classes */
+.glass-panel {
+  background: rgba(13, 20, 38, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(13, 20, 38, 0.75);
+  border-color: rgba(0, 230, 118, 0.3);
+  box-shadow: 0 0 25px rgba(0, 230, 118, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Neon utilities */
+.neon-border-green {
+  border-color: rgba(0, 230, 118, 0.5);
+  box-shadow: 0 0 15px rgba(0, 230, 118, 0.2);
+}
+
+.neon-border-blue {
+  border-color: rgba(0, 176, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 176, 255, 0.2);
+}
+
+.neon-border-cyan {
+  border-color: rgba(0, 229, 255, 0.5);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.neon-text-green {
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.6);
+}
+
+.neon-text-blue {
+  text-shadow: 0 0 8px rgba(0, 176, 255, 0.6);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 30px rgba(0, 230, 118, 0.15);
+}
+
+.glow-blue {
+  box-shadow: 0 0 30px rgba(0, 176, 255, 0.15);
+}
+
+/* Custom animated battery pulse */
+@keyframes batteryPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.battery-pulse {
+  animation: batteryPulse 2s infinite ease-in-out;
+}
